@@ -1,0 +1,378 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-headp img{
+    width: 100%;
+    object-fit: cover;
+    max-height: 383px;
+}
+
+.head-page{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.head-page a{
+    position: absolute;
+        top: 28px;
+        left: 20px;
+    color: black;
+}
+
+.head-page img{
+    width: 162px;
+    height: 44px;
+
+}
+
+.container{
+    position: relative;
+    bottom: 50px;
+    max-width: 1055px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(246, 246, 246, 1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+}
+
+.inmenu{
+    display: flex;
+    justify-content: center;
+}
+
+.inmenu h3{
+    font-weight: 400;
+    font-size: 28px;
+    font-style: italic;
+    font-family: Shrikhand;
+    padding-left: 10px;
+}
+
+.cardheart {
+    padding: 0px 30px;
+    display: flex;
+}
+
+.cardheart .fa-heart {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.heart-toggle {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    position: relative;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.fa-regular {
+    position: absolute;
+    color: black;
+}
+
+.solid-heart {
+    position: absolute;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+    clip-path: inset(100% 0 0 0); 
+    transition: clip-path 0.8s ease-in-out;
+}
+
+label:hover .solid-heart {
+    clip-path: inset(0 0 0 0);
+}
+
+
+
+
+.leadm{
+    font-family: Roboto;
+    margin-bottom: 5px;
+}
+
+
+.entrees, .plats, .desserts{
+    max-width: 634px;
+    margin: 0 auto;
+    
+}
+
+hr{
+    width: 40px;
+    border: 2px solid #99E2D0;
+    margin-bottom: 10px;
+}
+
+.entreesin, .platsin, .dessertsin{
+    display: block;
+    width: 100%;
+    height: 72px;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+    .dessertsin:hover .animation-hover-menu-item,
+    .entreesin:hover .animation-hover-menu-item,
+    .platsin:hover .animation-hover-menu-item {
+    right: 0px; 
+    background-color: #99E2D0;
+    width: 10%;
+    height: 100%;
+
+}
+
+.animation-hover-menu-item {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    border-radius: 0 20px 20px 0;
+    width: 0;
+    height: 100%;
+    background-color: #99E2D0;
+    transition: 
+        right 0.3s ease-in-out,
+        width 0.3s ease-in-out;
+}
+
+
+
+.icon-menu-item i {
+    position: absolute;
+    font-size: 18px;
+    color: #99E2D0;
+    top:35%;
+    left:35%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.description{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 100%;
+
+
+}
+
+.description p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60%;
+}
+
+.description .prix{
+    position: relative;
+    right: 0;
+    top: 40%;
+    transform: translateY(-40%);
+    transition: right 0.3s ease-in-out;
+}
+
+.entreesin:hover .prix,
+.dessertsin:hover .prix,
+.platsin:hover .prix{
+    right: 10%; 
+    
+}
+
+
+
+
+.entreesin:nth-child(1) {
+    animation: apparition 2s backwards;
+}
+
+.entreesin:nth-child(3) {
+    animation: apparition 2s 0.2s backwards;
+}
+
+.entreesin:nth-child(4) {
+    animation: apparition 2s 0.4s backwards;
+}
+
+.entreesin:nth-child(5) {
+    animation: apparition 2s 0.6s backwards;
+}
+
+.entreesin:nth-child(6) {
+    animation: apparition 2s 0.7s backwards;
+}
+
+
+
+
+.platsin:nth-child(3) {
+    animation: apparition 2s 0.8s backwards;
+}
+
+.platsin:nth-child(4) {
+    animation: apparition 2s 1s backwards;
+}
+
+.platsin:nth-child(5) {
+    animation: apparition 2s 1.2s backwards;
+}
+
+
+.dessertsin:nth-child(3) {
+    animation: apparition 2s 1.4s backwards;
+}
+
+.dessertsin:nth-child(4) {
+    animation: apparition 2s 1.6s backwards;
+}
+
+.dessertsin:nth-child(5) {
+    animation: apparition 2s 1.8s backwards;
+}
+
+
+
+
+
+
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+.prix{
+    font-family: Roboto;
+    font-size: 15.04px;
+    font-weight: 700;
+    line-height: 17.63px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+h3{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.09px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+p{
+    font-family: Roboto;
+    font-size: 15.04px;
+    font-weight: 300;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+button{
+    text-align: center;
+    font-weight: 500;
+    line-height: 18.75px;
+    font-size: 16px;
+    width: 186px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25);
+    margin-bottom: 30px;
+}
+
+button:hover{
+    background: linear-gradient(200.64deg, #d4b0ff -5.2%, #ff51ce 110.74%),
+linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    cursor: pointer;
+}
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    padding: 58px 80px 29.78px  10px ;
+}
+
+.footer-space{
+    flex-grow: 1;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.footer-logo{
+    font-family: Shrikhand;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 26.24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-left: 80px;
+}
+
+
+.footer-menu a i{
+    color: white;
+}
