@@ -7,8 +7,6 @@
 }
 
 
-
-
 li{
     list-style-type: none;
 }
@@ -96,10 +94,20 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     
 }
 .headertxtdiv{
-    width: 62%;
-    margin: 0 auto;
+    width: 60%;
     padding: 15px;
 }
+
+@media screen and (min-width: 1401px) {
+    .headertxtdiv{
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
 .infonctionnement{
     display: flex;
     flex-wrap: wrap;
@@ -257,9 +265,6 @@ label:hover .solid-heart {
 
 
 
-
-
-
         .loader {
             position: fixed;
             top: 50%;
@@ -286,17 +291,6 @@ label:hover .solid-heart {
                 opacity: 0;
             }
         }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -330,6 +324,9 @@ label:hover .solid-heart {
                 margin-right: 0.4rem;
             }
 
+
+
+      
 
         @media screen and (min-width: 1024px) {
             .footer {
