@@ -328,52 +328,58 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 .footer {
     background-color: #333;
     color: white;
+    padding: 20px;
     display: flex;
-    flex-wrap: wrap-reverse;
-    align-items: center;
-    padding: 58px 80px 29.78px  10px ;
-}
+    flex-direction: column;
+            
+        }
+    .footer-logo{
+        padding-bottom: 10px;
+        font-family: Shrikhand;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 26.24px;
+        } 
+    .footer-menu {
+        display: block;
+        }
+        .footer-menu a {
+            display: block;
+            margin: 0.5rem 0;
+            color: white;
+            text-decoration: none;
+            }
 
-.footer-space{
-    flex-grow: 1;
-}
-
-.footer-menu {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.footer-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18.75px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-}
-
-.footer-logo{
-    font-family: Shrikhand;
-    font-size: 18px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 26.24px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    margin-left: 80px;
-}
+            .icon {
+                margin-right: 0.4rem;
+            }
 
 
-.footer-menu a i{
-    color: white;
-}
+        @media screen and (min-width: 1024px) {
+            .footer {
+                flex-direction: row-reverse; 
+                justify-content: flex-start;
+                align-items: center;
+                gap: 2rem;
+                width: 100%;
+            }
+            .footer-logo{
+                padding:0 40px 0px  30px ;
+            }
+            .footer-menu {
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+                padding-right: 20px;
+            }
+            .footer-menu a {
+                display: inline-flex;
+                align-items: center;
+                margin: 0;
+            }
+            .footer-menu {
+                margin-left: auto;
+            }
+        }
+
