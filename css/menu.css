@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+
+
+.menu-headp{
+    height: 100%;
+    
+}
+
 .menu-headp img{
     width: 100%;
     object-fit: cover;
@@ -27,12 +34,14 @@
 .head-page img{
     width: 162px;
     height: 44px;
-
+    z-index: 1;
 }
 
 .container{
+    z-index: 2;
     position: relative;
-    bottom: 50px;
+    top: -50px;
+    height: 100%;
     max-width: 1055px;
     margin: 0 auto;
     text-align: center;
@@ -44,20 +53,40 @@
 
 .inmenu{
     display: flex;
-    justify-content: center;
+    width: 100%;
 }
 
 .inmenu h3{
-    font-weight: 400;
-    font-size: 28px;
-    font-style: italic;
     font-family: Shrikhand;
-    padding-left: 10px;
-    padding-bottom: 20px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding-bottom: 15px;
+    width: 60%;
 }
 
+@media screen and (min-width: 768px){
+    .inmenu h3{
+        text-align: end;
+    }
+
+    .inmenu .cardheart{
+        justify-content: flex-start;
+    }
+}
+
+.cardheart{
+    width: 40%;
+    justify-content: flex-end;
+}
+
+.heart-toggle {
+    display: none;
+}
 .cardheart {
-    padding: 0px 30px;
+    padding: 0px 50px;
     display: flex;
 }
 
@@ -66,9 +95,6 @@
     cursor: pointer;
 }
 
-.heart-toggle {
-    display: none;
-}
 
 label {
     display: inline-block;
@@ -99,7 +125,13 @@ label:hover .solid-heart {
 
 
 .leadm{
+    padding-top: 20px;
     font-family: Roboto;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
     margin-bottom: 5px;
 }
 
@@ -118,7 +150,9 @@ hr{
 
 .entreesin, .platsin, .dessertsin{
     display: block;
-    width: 100%;
+    width: 100%;    
+    
+
     height: 72px;
     border-radius: 20px;
     padding-bottom: 20px;
@@ -139,7 +173,7 @@ hr{
     .platsin:hover .animation-hover-menu-item {
     right: 0px; 
     background-color: #99E2D0;
-    width: 10%;
+    width: 59px;
     height: 100%;
 
 }
@@ -198,7 +232,7 @@ hr{
 .entreesin:hover .prix,
 .dessertsin:hover .prix,
 .platsin:hover .prix{
-    right: 10%; 
+    right: 59px; 
     
 }
 
@@ -284,6 +318,8 @@ hr{
 
 }
 h3{
+    
+    max-width: 60%;
     font-family: Roboto;
     font-size: 18px;
     font-weight: 500;
@@ -291,7 +327,6 @@ h3{
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-
 }
 p{
     font-family: Roboto;
@@ -314,8 +349,8 @@ button{
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     color: white;
     border: none;
-    box-shadow: rgba(0, 0, 0, 0.25);
-    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    margin:20px 0 20px 0;
 }
 
 button:hover{
@@ -326,13 +361,15 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 
 
 .footer {
+    position: relative;
+    margin-top: -50px;
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 40px 20px 20px 20px;
     display: flex;
     flex-direction: column;
-            
         }
+
     .footer-logo{
         padding-bottom: 10px;
         font-family: Shrikhand;
@@ -349,6 +386,11 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
             margin: 0.5rem 0;
             color: white;
             text-decoration: none;
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
             }
 
             .icon {
@@ -361,11 +403,11 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
                 flex-direction: row-reverse; 
                 justify-content: flex-start;
                 align-items: center;
-                gap: 2rem;
+                gap: 5rem;
                 width: 100%;
             }
             .footer-logo{
-                padding:0 40px 0px  30px ;
+                padding:0 40px 0px  10px ;
             }
             .footer-menu {
                 display: flex;

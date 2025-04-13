@@ -7,6 +7,36 @@
 }
 
 
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(10);
+    width: 100vh;
+    height: 100vh;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    border-radius: 50%;
+    animation: loader 3s ease-out forwards;
+    z-index: 99;
+}
+@keyframes loader {
+    0% {
+        transform: translate(-50%, -50%) scale(10); 
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0); 
+        opacity: 0;
+    }
+} 
+
+
+
 li{
     list-style-type: none;
 }
@@ -31,6 +61,8 @@ button{
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     color: white;
     border: none;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 35px;
 }
 
 button:hover{
@@ -58,11 +90,11 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     height: 50px;
     background-color: #EAEAEA;
     text-align: center;
-    box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 125), 0 0px 10px 0 rgba(0, 0, 0, 125);
 }
 
 .headl p{
     padding: 15px;
+    color: rgba(53, 53, 53, 1);
 }
 
 .explorer{
@@ -72,19 +104,27 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     justify-content: center;
     background-color: #f3f3f3;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 
-.explorer .inexp h3{
-    
+.inexp h3{
+    font-family: Roboto;
+    font-weight: 700;
     font-size: 24px;
-    line-height: 28.13px;
+    line-height: 100%;
+
 }
 .explorer .inexp p{
-    padding: 10px;
+    padding: 30px;
+    font-family: Roboto;
     font-weight: 300;
     font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
 }
 
 
@@ -105,15 +145,12 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 }
 
 
-
-
-
 .infonctionnement{
     display: flex;
     flex-wrap: wrap;
     max-width: 1053px;
     padding: 20px;
-    gap: 20px;
+    gap: 22px;
     margin: 0 auto;
 }
 .infonctionnement div{
@@ -124,12 +161,33 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     align-items: center;
     border-radius: 20px;
     gap: 20px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
 }
+
+.infonctionnement div p{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    
+}
+
+.infonctionnement div .fa-mobile, .fa-list{
+    color: grey;
+}
+
+.fa-store{
+    color: rgba(147, 86, 220, 1);
+}
+
+
 
 .infonctionnement div .circle{
     width: 24px;
     height: 24px;
-    background-color:#9356DC ;
+    background-color:rgba(147, 86, 220, 1) ;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -156,17 +214,28 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     height: auto;
     
 }
+
+h2 {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
 .cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     column-gap: 100px;
-    
     max-width: 1080px;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
-
+.card:nth-child(4) { 
+    margin-bottom: 30px;
+}
 
 .card{
     margin-top: 20px;
@@ -174,7 +243,6 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     width: 490px;
     background-color: white;
     border-radius: 20px;
-    
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     overflow: hidden;
     
@@ -219,6 +287,16 @@ a {
 }
 .card-txt{
     width: 70%;
+    margin: auto;
+}
+
+.card-txt h3{
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
 }
 
 .card-txt P{
@@ -231,6 +309,7 @@ a {
     justify-content: end;
     position: relative;
     width: 30%;
+    padding-top: 10px;
     padding-right: 20px;
 }
 
@@ -254,7 +333,7 @@ label {
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-    clip-path: inset(100% 0 0 0); 
+    clip-path: inset( 0 0 100% 0); 
     transition: clip-path 0.8s ease-in-out;
 }
 
@@ -264,43 +343,14 @@ label:hover .solid-heart {
 
 
 
-
-        .loader {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            width: 100vh;
-            height: 100vh;
-            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-            border-radius: 50%;
-            transform: translate(-50%, -50%) scale(10);
-            animation: loader 3s ease-out forwards;
-            z-index: 99;
-        }
-        @keyframes loader {
-            0% {
-                transform: translate(-50%, -50%) scale(10); 
-                opacity: 1;
-            }
-            50% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: translate(-50%, -50%) scale(0); 
-                opacity: 0;
-            }
-        }
-
-
-
 .footer {
+    position: relative;
+    margin-top: -50px;
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 40px 20px 20px 20px;
     display: flex;
     flex-direction: column;
-            
         }
     .footer-logo{
         padding-bottom: 10px;
@@ -318,6 +368,11 @@ label:hover .solid-heart {
             margin: 0.5rem 0;
             color: white;
             text-decoration: none;
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
             }
 
             .icon {
@@ -329,6 +384,21 @@ label:hover .solid-heart {
       
 
         @media screen and (min-width: 1024px) {
+
+            .inexp h3{
+                
+                font-family: Roboto;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+                
+                
+                
+            }
+
+
             .footer {
                 flex-direction: row-reverse; 
                 justify-content: flex-start;
